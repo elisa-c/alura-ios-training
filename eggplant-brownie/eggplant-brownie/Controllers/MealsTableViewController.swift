@@ -5,15 +5,25 @@
 //  Created by Elisa Camillo on 16/03/21.
 //
 
-import Foundation
 
 import UIKit
 
 class MealsTableViewController: UITableViewController {
-    let meals = [Meal(name: "noodles", happiness: 4),
+
+    var meals = [Meal(name: "noodles", happiness: 4),
                  Meal(name: "pizza", happiness: 4),
                  Meal(name: "temaki", happiness: 4),
                  Meal(name: "cookies", happiness: 4)]
+    
+    func add(meal: Meal) {
+        meals.append(meal)
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let view = segue.destination as! ViewController
+            view.mealsTable = self
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return meals.count
@@ -28,5 +38,9 @@ class MealsTableViewController: UITableViewController {
         
         return cell
     }
+    
+
+    
+
     
 }

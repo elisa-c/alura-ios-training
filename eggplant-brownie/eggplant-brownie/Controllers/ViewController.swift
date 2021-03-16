@@ -8,9 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet var nameTextField:UITextField?
     @IBOutlet weak var happinessTextField: UITextField?
+    
+    var mealsTable: MealsTableViewController?
     
     @IBAction func add(_ sender: Any){
 
@@ -23,8 +24,10 @@ class ViewController: UIViewController {
         }
         
         let meal = Meal(name: mealName, happiness: happiness)
-
-        print("I ate \(meal.name) and my happiness was \(meal.happiness)/5")
+    
+        mealsTable?.add(meal: meal)
+        
+        navigationController?.popViewController(animated: true)
     }
-
+    
 }
