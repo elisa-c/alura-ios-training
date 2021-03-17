@@ -7,24 +7,43 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+import Foundation
 
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddIngredientsDelegate {
     
-    // IBOutlets
+    // MARK: - IBOutlets
         
     @IBOutlet var nameTextField:UITextField?
     @IBOutlet weak var happinessTextField: UITextField?
+    @IBOutlet weak var ingredientsTableView: UITableView!
     
     // Attributes
     
     var delegate: AddMealsDelegate?
-    var items: [Item] = [Item(name: "tomato sauce", calories: 23),
-                         Item(name: "cheese", calories: 67),
-                         Item(name: "basil", calories: 2),
+    var items: [Item] = [Item(name: "Tomato Sauce", calories: 23),
+                         Item(name: "Cheese", calories: 67),
+                         Item(name: "Basil", calories: 2),
                          ]
     var selectedItems: [Item] = []
     
-    // UITableViewDataSource
+    // MARK: - View life cycle
+    
+    override func viewDidLoad() {
+        let btnAddItem = UIBarButtonItem(title: "add", style: .plain, target: self, action: #selector(addItem))
+        navigationItem.rightBarButtonItem = btnAddItem
+    }
+    
+    @objc func addItem(){ // @objc to use objective-c methods such as Selector
+        let addIngredientsViewController = AddIngredientsViewController(delegate: self)
+        navigationController?.pushViewController(addIngredientsViewController, animated: true)
+    }
+    
+    func add(_ item: Item) {
+        items.append(item)
+        ingredientsTableView.reloadData()
+    }
+    
+    // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -39,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    // UITableViewDelegate
+    // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) else {return}
@@ -64,7 +83,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     }
     
-    // IBAction
+    // MARK: - IBAction
     
     @IBAction func add(_ sender: Any){ // _  hidden parameter
 

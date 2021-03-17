@@ -10,10 +10,10 @@ import UIKit
 
 class MealsTableViewController: UITableViewController, AddMealsDelegate {
 
-    var meals = [Meal(name: "noodles", happiness: 4, items: []),
-                 Meal(name: "pizza", happiness: 4, items: []),
-                 Meal(name: "temaki", happiness: 4, items: []),
-                 Meal(name: "cookies", happiness: 4, items: [])]
+    var meals = [Meal(name: "Noodles", happiness: 4, items: []),
+                 Meal(name: "Pizza", happiness: 4, items: []),
+                 Meal(name: "Temaki", happiness: 4, items: []),
+                 Meal(name: "Guacamole", happiness: 4, items: [])]
     
     func add(meal: Meal) {
         meals.append(meal)

@@ -17,6 +17,8 @@
 		66A65E4925FFE54A0054D42E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A65E4825FFE54A0054D42E /* Item.swift */; };
 		66ECE267260126110036976D /* MealsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECE266260126110036976D /* MealsTableViewController.swift */; };
 		66ECE26D260194780036976D /* AddMealsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECE26C260194780036976D /* AddMealsDelegate.swift */; };
+		66ECE271260248E30036976D /* AddIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECE26F260248E30036976D /* AddIngredientsViewController.swift */; };
+		66ECE272260248E30036976D /* AddIngredientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66ECE270260248E30036976D /* AddIngredientsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		66A65E4825FFE54A0054D42E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		66ECE266260126110036976D /* MealsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsTableViewController.swift; sourceTree = "<group>"; };
 		66ECE26C260194780036976D /* AddMealsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealsDelegate.swift; sourceTree = "<group>"; };
+		66ECE26F260248E30036976D /* AddIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewController.swift; sourceTree = "<group>"; };
+		66ECE270260248E30036976D /* AddIngredientsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddIngredientsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +95,9 @@
 		66A65E4D25FFE6B30054D42E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				66A65E3225FC4C060054D42E /* ViewController.swift */,
+				66ECE26F260248E30036976D /* AddIngredientsViewController.swift */,
 				66ECE266260126110036976D /* MealsTableViewController.swift */,
+				66A65E3225FC4C060054D42E /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				66A65E3425FC4C060054D42E /* Main.storyboard */,
+				66ECE270260248E30036976D /* AddIngredientsViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +170,7 @@
 			files = (
 				66A65E3B25FC4C080054D42E /* LaunchScreen.storyboard in Resources */,
 				66A65E3825FC4C080054D42E /* Assets.xcassets in Resources */,
+				66ECE272260248E30036976D /* AddIngredientsViewController.xib in Resources */,
 				66A65E3625FC4C060054D42E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +187,7 @@
 				66ECE267260126110036976D /* MealsTableViewController.swift in Sources */,
 				66A65E3325FC4C060054D42E /* ViewController.swift in Sources */,
 				66A65E2F25FC4C060054D42E /* AppDelegate.swift in Sources */,
+				66ECE271260248E30036976D /* AddIngredientsViewController.swift in Sources */,
 				66ECE26D260194780036976D /* AddMealsDelegate.swift in Sources */,
 				66A65E3125FC4C060054D42E /* SceneDelegate.swift in Sources */,
 			);
