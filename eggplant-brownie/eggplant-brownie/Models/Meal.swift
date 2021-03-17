@@ -12,12 +12,13 @@ class Meal: NSObject {
     // attributes
     let name: String
     let happiness: Int
-    let items: Array<Item> = []
+    var items: Array<Item> = []
     
     // constructor
-    init(name: String, happiness: Int) {
+    init(name: String, happiness: Int, items: [Item] = []) {
         self.name = name
         self.happiness = happiness
+        self.items = items
     }
     
     //methods

@@ -64,6 +64,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="G8s-gX-dGW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Q99-Z3-kAf"/>
                                 </connections>
                             </tableView>
                         </subviews>
