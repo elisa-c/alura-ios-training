@@ -50,30 +50,16 @@ class MealsTableViewController: UITableViewController, AddMealsDelegate {
         if gesture.state == .began { // enters the condition only once, after the long press has started. prevents double actions
             
             let cell = gesture.view as! UITableViewCell
-            
             guard let indexPath = tableView.indexPath(for: cell) else {return}
             let selectedMeal = meals[indexPath.row]
             
 //          guard let selectedMealName = cell.textLabel?.text else {return}
             
-            func removeMeal(alert: UIAlertAction){
-                print(selectedMeal.name)
-                meals.remove(at: indexPath.row)
-                tableView.reloadData()
-            }
-            
-            let alert = UIAlertController(title: selectedMeal.name, message: selectedMeal.details(), preferredStyle: .alert)
-        
-            let buttonCancel = UIAlertAction(title: "OK", style: .cancel)
-            
-            alert.addAction(buttonCancel)
-            
-            let buttonRemove = UIAlertAction(title: "Remove", style: .destructive, handler: removeMeal)
-            
-            alert.addAction(buttonRemove)
-            
-            present(alert, animated: true, completion: nil)
-            
+            RemoveMealViewController(controller: self).show(selectedMeal, handler: {
+                alert in
+                self.meals.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            })
             
         }
     }
