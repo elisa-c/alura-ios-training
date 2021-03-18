@@ -23,10 +23,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="cake" textAlignment="center" minimumFontSize="47" translatesAutoresizingMaskIntoConstraints="NO" id="DHx-3o-KIV">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cake" textAlignment="center" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="DHx-3o-KIV">
                                 <rect key="frame" x="188" y="190" width="166" height="51.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happiness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zs-hT-lCU">
@@ -36,10 +36,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="center" minimumFontSize="48" translatesAutoresizingMaskIntoConstraints="NO" id="6Co-gC-rmZ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="center" minimumFontSize="36" translatesAutoresizingMaskIntoConstraints="NO" id="6Co-gC-rmZ">
                                 <rect key="frame" x="272" y="286" width="82" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffl-nk-BuM">
@@ -74,7 +74,7 @@
                     <navigationItem key="navigationItem" id="FcE-Vm-xie"/>
                     <connections>
                         <outlet property="happinessTextField" destination="6Co-gC-rmZ" id="avI-3v-U91"/>
-                        <outlet property="ingredientsTableView" destination="UuR-Kw-nmA" id="MqC-fF-OwA"/>
+                        <outlet property="ingredientsTableView" destination="UuR-Kw-nmA" id="3UX-Gx-Zc4"/>
                         <outlet property="nameTextField" destination="DHx-3o-KIV" id="7UP-08-kk7"/>
                     </connections>
                 </viewController>

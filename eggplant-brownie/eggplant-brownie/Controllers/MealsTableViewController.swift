@@ -40,9 +40,33 @@ class MealsTableViewController: UITableViewController, AddMealsDelegate {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         cell.textLabel?.text = currMeal.name
         
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(showDetails(_:)))
+        cell.addGestureRecognizer(longPress)
+        
         return cell
     }
     
+    @objc func showDetails(_ gesture: UILongPressGestureRecognizer){
+        if gesture.state == .began { // enters the condition only once, after the long press has started. prevents double actions
+            
+            let cell = gesture.view as! UITableViewCell
+            
+            guard let indexPath = tableView.indexPath(for: cell) else {return}
+            let selectedMeal = meals[indexPath.row]
+            
+//          guard let selectedMealName = cell.textLabel?.text else {return}
+            
+            let alert = UIAlertController(title: selectedMeal.name, message: selectedMeal.details(), preferredStyle: .alert)
+        
+            let buttonCancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alert.addAction(buttonCancel)
+            
+            present(alert, animated: true, completion: nil)
+            
+            
+        }
+    }
 
     
 

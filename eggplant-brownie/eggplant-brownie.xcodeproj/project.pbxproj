@@ -19,6 +19,7 @@
 		66ECE26D260194780036976D /* AddMealsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECE26C260194780036976D /* AddMealsDelegate.swift */; };
 		66ECE271260248E30036976D /* AddIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66ECE26F260248E30036976D /* AddIngredientsViewController.swift */; };
 		66ECE272260248E30036976D /* AddIngredientsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66ECE270260248E30036976D /* AddIngredientsViewController.xib */; };
+		66FD02D72602C7E4000019A4 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FD02D62602C7E4000019A4 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		66ECE26C260194780036976D /* AddMealsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealsDelegate.swift; sourceTree = "<group>"; };
 		66ECE26F260248E30036976D /* AddIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientsViewController.swift; sourceTree = "<group>"; };
 		66ECE270260248E30036976D /* AddIngredientsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddIngredientsViewController.xib; sourceTree = "<group>"; };
+		66FD02D62602C7E4000019A4 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				66A65E4525FFE4EC0054D42E /* Meal.swift */,
 				66A65E4825FFE54A0054D42E /* Item.swift */,
 				66ECE26C260194780036976D /* AddMealsDelegate.swift */,
+				66FD02D62602C7E4000019A4 /* Alert.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66FD02D72602C7E4000019A4 /* Alert.swift in Sources */,
 				66A65E4925FFE54A0054D42E /* Item.swift in Sources */,
 				66A65E4625FFE4EC0054D42E /* Meal.swift in Sources */,
 				66ECE267260126110036976D /* MealsTableViewController.swift in Sources */,

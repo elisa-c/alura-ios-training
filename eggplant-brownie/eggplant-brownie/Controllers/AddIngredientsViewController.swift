@@ -46,7 +46,8 @@ class AddIngredientsViewController: UIViewController {
                 name: name,
                 calories: nOfCalories
             )
-            delegate?.add(item)
+
+        delegate?.add(item) // if it exists, continue; it not, ignore
             navigationController?.popViewController(animated: true)
         }
     

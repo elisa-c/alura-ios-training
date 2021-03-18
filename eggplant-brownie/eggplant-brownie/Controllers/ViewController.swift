@@ -12,10 +12,10 @@ import Foundation
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddIngredientsDelegate {
     
     // MARK: - IBOutlets
-        
+    
     @IBOutlet var nameTextField:UITextField?
     @IBOutlet weak var happinessTextField: UITextField?
-    @IBOutlet weak var ingredientsTableView: UITableView!
+    @IBOutlet weak var ingredientsTableView: UITableView?
     
     // Attributes
     
@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var items: [Item] = [Item(name: "Tomato Sauce", calories: 23),
                          Item(name: "Cheese", calories: 67),
                          Item(name: "Basil", calories: 2),
-                         ]
+    ]
     var selectedItems: [Item] = []
     
     // MARK: - View life cycle
@@ -40,8 +40,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(_ item: Item) {
         items.append(item)
-        ingredientsTableView.reloadData()
+        if let tableView = ingredientsTableView {
+            tableView.reloadData()
+        } else {
+            Alert(controller: self).show(message: "It wasn't possible to update the table")
+            
+        }
     }
+    
+    
     
     // MARK: - UITableViewDataSource
     
@@ -80,26 +87,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         for item in selectedItems {
             print (item.name)
         }
-
+        
     }
     
-    // MARK: - IBAction
-    
-    @IBAction func add(_ sender: Any){ // _  hidden parameter
-
+    func retrieveMealFromForm() -> Meal? {
         guard let mealName = nameTextField?.text else {
-            return
+            //            Alert(controller: self).show(message: "Please input a name for the meal")
+            return nil
         }
         
         guard let mealHappiness = happinessTextField?.text, let happiness = Int(mealHappiness) else {
-            return
+            //            Alert(controller: self).show(message: "Happiness must be a number between 1 and 5")
+            return nil
         }
         
         let meal = Meal(name: mealName, happiness: happiness, items: selectedItems )
-                            
-        delegate?.add(meal: meal)
-                
-        navigationController?.popViewController(animated: true)
+        
+        return meal
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func add(_ sender: Any){ // _  hidden parameter
+        
+        if let meal = retrieveMealFromForm() {
+            delegate?.add(meal: meal)
+            navigationController?.popViewController(animated: true)
+        } else {
+            Alert(controller: self).show(message: "Error in reading form data")
+        }
+        
+        
     }
     
 }
